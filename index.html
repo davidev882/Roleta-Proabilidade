@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roleta da Probabilidade</title>
+  <meta name="description" content="Site educativo sobre probabilidade, eventos independentes e a Falácia do Apostador com uma roleta de duas cores (EF09MA20).">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2a14 14 0 0 1 0 28z' fill='%23C8102E'/%3E%3Cpath d='M16 30a14 14 0 0 1 0-28z' fill='%231B1B1F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo__interno">
+      <a class="marca" href="#inicio">
+        <span class="marca__icone" aria-hidden="true"></span>
+        Roleta da Probabilidade
+      </a>
+      <nav aria-label="Seções do site">
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#aprenda">Aprenda</a></li>
+          <li><a href="#roleta">Roleta</a></li>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ 4.1 INÍCIO ============ -->
+    <section id="inicio" class="hero">
+      <div class="container hero__grade">
+        <div class="hero__texto">
+          <p class="sobretitulo">EF09MA20 · Probabilidade · Trabalho 3</p>
+          <h1>Roleta da <em>Probabilidade</em></h1>
+          <p class="hero__subtitulo">O Mito do Gambler — A Roleta das Cores</p>
+          <p class="hero__intro">
+            A roleta deu <strong class="txt-vermelho">vermelho</strong> cinco vezes seguidas.
+            Agora o <strong>preto</strong> está “atrasado”? Nesta atividade você vai investigar
+            se os resultados anteriores mudam a chance do próximo giro.
+          </p>
+          <div class="hero__acoes">
+            <a class="botao botao--primario" href="#roleta">Começar atividade</a>
+            <a class="botao botao--secundario" href="#aprenda">Ver os conceitos</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="roleta roleta--hero" data-roleta></div>
+          <span class="selo selo--1">P(Vermelho) = 1/2</span>
+          <span class="selo selo--2">P(Preto) = 1/2</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="conceitos">
+          <li class="conceito">
+            <span class="conceito__num">1</span>
+            <h2 class="conceito__titulo">Probabilidade</h2>
+            <p>A medida da chance de um evento acontecer. Na roleta de duas cores iguais, cada cor tem 50%.</p>
+          </li>
+          <li class="conceito">
+            <span class="conceito__num">2</span>
+            <h2 class="conceito__titulo">Independência</h2>
+            <p>O resultado de um giro não muda a chance do giro seguinte. A roleta não tem memória.</p>
+          </li>
+          <li class="conceito">
+            <span class="conceito__num">3</span>
+            <h2 class="conceito__titulo">Falácia do Apostador</h2>
+            <p>A crença errada de que, depois de uma sequência, a cor oposta fica “mais devida”.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 4.2 APRENDA ============ -->
+    <section id="aprenda" class="secao">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <p class="sobretitulo">Antes de girar</p>
+          <h2>Aprenda</h2>
+          <p>Os conceitos que você precisa para entender o que acontece na roleta.</p>
+        </header>
+
+        <div class="aprenda">
+          <article class="cartao">
+            <h3>O que é probabilidade?</h3>
+            <p>Probabilidade é a <strong>medida da chance</strong> de um evento acontecer. Ela vai de 0 (impossível) a 1 (certo) — ou de 0% a 100%.</p>
+            <p class="formula">
+              P(evento) =
+              <span class="fracao"><span>casos favoráveis</span><span>casos possíveis</span></span>
+            </p>
+            <p>Na roleta ideal, com duas partes iguais:</p>
+            <div class="formulas-cores">
+              <p class="formula formula--vermelho">P(Vermelho) = <span class="fracao"><span>1</span><span>2</span></span> = 0,5 = <strong>50%</strong></p>
+              <p class="formula formula--preto">P(Preto) = <span class="fracao"><span>1</span><span>2</span></span> = 0,5 = <strong>50%</strong></p>
+            </div>
+          </article>
+
+          <article class="cartao">
+            <h3>Evento independente</h3>
+            <p>Quando o resultado de um evento <strong>não modifica</strong> a chance do outro.</p>
+            <p>É o caso da roleta: ela não “lembra” o que saiu antes. Cada giro é um novo experimento.</p>
+            <div class="exemplo">
+              <div class="exemplo__passo">
+                <span class="exemplo__rotulo">Giro 1</span>
+                <span class="chip chip--vermelho"><span aria-hidden="true">V</span><span class="sr-only">Vermelho</span></span>
+              </div>
+              <span class="exemplo__seta" aria-hidden="true">→</span>
+              <div class="exemplo__passo">
+                <span class="exemplo__rotulo">Giro 2</span>
+                <span class="exemplo__texto">50% V · 50% P</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cartao">
+            <h3>Evento dependente</h3>
+            <p>Quando o resultado de um evento <strong>influencia</strong> a probabilidade de outro.</p>
+            <p>Exemplo: uma caixa com 2 bolas vermelhas e 2 pretas. Tiramos uma vermelha e <strong>não devolvemos</strong>.</p>
+            <div class="exemplo">
+              <div class="exemplo__passo">
+                <span class="exemplo__rotulo">Antes: 2 de 4</span>
+                <span class="bolas" aria-label="2 bolas vermelhas e 2 pretas">
+                  <span class="bola bola--v"></span><span class="bola bola--v"></span><span class="bola bola--p"></span><span class="bola bola--p"></span>
+                </span>
+                <span class="exemplo__texto">P(vermelha) = 50%</span>
+              </div>
+              <span class="exemplo__seta" aria-hidden="true">→</span>
+              <div class="exemplo__passo">
+                <span class="exemplo__rotulo">Depois: 1 de 3</span>
+                <span class="bolas" aria-label="1 bola vermelha e 2 pretas; uma vermelha foi retirada">
+                  <span class="bola bola--fora"></span><span class="bola bola--v"></span><span class="bola bola--p"></span><span class="bola bola--p"></span>
+                </span>
+                <span class="exemplo__texto">P(vermelha) ≈ 33%</span>
+              </div>
+            </div>
+            <p class="nota">Aqui o primeiro resultado mudou a chance do segundo. Na roleta, isso <strong>não</strong> acontece — o exemplo principal desta atividade é de independência.</p>
+          </article>
+
+          <article class="cartao cartao--alerta">
+            <h3>Falácia do Apostador</h3>
+            <p>É acreditar, <strong>incorretamente</strong>, que uma sequência de resultados torna o resultado oposto “mais devido” ou “atrasado” em um experimento independente.</p>
+            <blockquote class="citacao">
+              “Já saiu vermelho cinco vezes, agora <em>tem</em> que sair preto!”
+              <span class="citacao__selo">Falso</span>
+            </blockquote>
+            <p>Na roleta justa, depois de qualquer sequência, a chance continua <strong>50% para cada cor</strong>.</p>
+          </article>
+
+          <article class="cartao">
+            <h3>E a sequência de cinco vermelhos?</h3>
+            <p>Antes de começar a girar, a chance de sair vermelho nos cinco giros é:</p>
+            <p class="formula">
+              (<span class="fracao"><span>1</span><span>2</span></span>)<sup>5</sup> = <span class="fracao"><span>1</span><span>32</span></span> = <strong>3,125%</strong>
+            </p>
+            <p>Isso é raro! Mas depois que os cinco vermelhos <strong>já aconteceram</strong>, a chance de vermelho no próximo giro continua 50% — assim como a de preto.</p>
+          </article>
+
+          <article class="cartao">
+            <h3>Teórica × observada</h3>
+            <dl class="definicoes">
+              <dt>Probabilidade teórica</dt>
+              <dd>Chance calculada pelo modelo matemático <strong>antes</strong> de observar os resultados. Na roleta: 50% para cada cor.</dd>
+              <dt>Frequência observada</dt>
+              <dd>Proporção de vezes que um resultado <strong>apareceu</strong> na simulação.</dd>
+            </dl>
+            <p>Em poucos giros, a frequência observada pode ficar bem diferente de 50%. Com muitos giros, ela tende a se aproximar de 50% — mas não precisa ser exatamente igual. A roleta <strong>não “compensa”</strong> resultados anteriores.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4.3 ROLETA VIRTUAL ============ -->
+    <section id="roleta" class="secao secao--papel">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <p class="sobretitulo">Experimente</p>
+          <h2>Roleta virtual</h2>
+          <p>Escolha sua previsão, gire a roleta e observe o resultado. Repita quantas vezes quiser.</p>
+        </header>
+
+        <div class="painel-roleta">
+          <div class="painel-roleta__visual">
+            <div class="roleta" id="roleta-principal" data-roleta></div>
+            <p class="chance-fixa">
+              Em todo giro:
+              <span class="etiqueta etiqueta--vermelho">Vermelho 50%</span>
+              <span class="etiqueta etiqueta--preto">Preto 50%</span>
+            </p>
+          </div>
+
+          <div class="painel-roleta__controles">
+            <fieldset class="previsao">
+              <legend>1. Qual é a sua previsão?</legend>
+              <div class="previsao__opcoes">
+                <label class="opcao opcao--vermelho">
+                  <input type="radio" name="previsao" value="Vermelho">
+                  <span class="opcao__corpo"><span class="bolinha bolinha--vermelho" aria-hidden="true"></span>Vermelho</span>
+                </label>
+                <label class="opcao opcao--preto">
+                  <input type="radio" name="previsao" value="Preto">
+                  <span class="opcao__corpo"><span class="bolinha bolinha--preto" aria-hidden="true"></span>Preto</span>
+                </label>
+              </div>
+              <p class="previsao-atual" id="previsao-atual">Sua previsão: <strong>nenhuma escolhida</strong></p>
+            </fieldset>
+
+            <div class="girar">
+              <p class="girar__legenda">2. Gire a roleta</p>
+              <button type="button" class="botao botao--primario botao--grande" id="botao-girar">Girar roleta</button>
+              <p class="aviso" id="aviso-previsao" role="alert" hidden>Escolha <strong>Vermelho</strong> ou <strong>Preto</strong> antes de girar.</p>
+            </div>
+
+            <div class="resultado" id="resultado" aria-live="polite">
+              <p class="resultado__vazio">O resultado do giro aparece aqui.</p>
+            </div>
+
+            <div class="pergunta-sequencia" id="pergunta-sequencia" hidden></div>
+
+            <div class="ultimos">
+              <p class="ultimos__titulo">Últimos giros</p>
+              <ol class="fileira-chips" id="ultimos-giros"></ol>
+              <p class="ultimos__vazio" id="ultimos-vazio">Nenhum giro realizado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4.4 DESAFIO DA TURMA ============ -->
+    <section id="desafio" class="secao secao--escura">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <p class="sobretitulo">Para fazer em sala</p>
+          <h2>Desafio da turma</h2>
+          <p>Veja a sequência, vote e descubra se o preto está mesmo “atrasado”.</p>
+        </header>
+
+        <ol class="etapas">
+          <li class="etapa" id="etapa-1">
+            <h3 class="etapa__titulo" tabindex="-1"><span class="etapa__num">1</span>A sequência</h3>
+            <p>Imagine que a turma girou a roleta cinco vezes e aconteceu isto:</p>
+            <ol class="fileira-chips fileira-chips--grande" id="sequencia-desafio"></ol>
+            <p class="etapa__legenda" id="legenda-sequencia" hidden><strong>5 × Vermelho</strong> seguidos!</p>
+            <button type="button" class="botao botao--ouro" id="botao-mostrar-sequencia">Mostrar sequência</button>
+          </li>
+
+          <li class="etapa" id="etapa-2" hidden>
+            <h3 class="etapa__titulo" tabindex="-1"><span class="etapa__num">2</span>A votação</h3>
+            <p class="pergunta-grande">Depois de cinco vermelhos seguidos, qual cor você acha que sairá no próximo giro?</p>
+            <div class="votos">
+              <button type="button" class="voto voto--vermelho" data-voto="Vermelho">
+                <span class="voto__nome">Vermelho</span>
+                <span class="voto__contagem" id="votos-vermelho">0</span>
+              </button>
+              <button type="button" class="voto voto--preto" data-voto="Preto">
+                <span class="voto__nome">Preto</span>
+                <span class="voto__contagem" id="votos-preto">0</span>
+              </button>
+            </div>
+            <p class="dica">Cada clique registra um voto — use para a turma toda ou só para você.</p>
+            <p class="resumo-votos" id="resumo-votos" aria-live="polite">Nenhum voto ainda.</p>
+            <button type="button" class="botao botao--ouro" id="botao-revelar" disabled>Encerrar votação e revelar</button>
+          </li>
+
+          <li class="etapa" id="etapa-3" hidden>
+            <h3 class="etapa__titulo" tabindex="-1"><span class="etapa__num">3</span>A resposta</h3>
+            <div class="revelacao">
+              <div class="revelacao__numeros">
+                <div class="revelacao__item revelacao__item--vermelho"><span>Vermelho</span><strong>50%</strong></div>
+                <div class="revelacao__item revelacao__item--preto"><span>Preto</span><strong>50%</strong></div>
+              </div>
+              <p class="revelacao__comentario" id="comentario-votacao"></p>
+              <p>Em uma roleta justa, cada giro é <strong>independente</strong>: a roleta não tem memória e não “sabe” que saíram cinco vermelhos. Por isso, a chance continua sendo <strong>50% para cada cor</strong>.</p>
+              <p class="nota">Antes de começar, a chance de sair cinco vermelhos seguidos era (1/2)<sup>5</sup> = 1/32 = 3,125%. Mas, depois que eles já saíram, isso ficou no passado: o próximo giro é um novo experimento.</p>
+            </div>
+            <button type="button" class="botao botao--ouro" id="botao-ir-giro">Fazer o próximo giro</button>
+          </li>
+
+          <li class="etapa" id="etapa-4" hidden>
+            <h3 class="etapa__titulo" tabindex="-1"><span class="etapa__num">4</span>O próximo giro</h3>
+            <div class="desafio-giro">
+              <div class="roleta roleta--media" id="roleta-desafio" data-roleta></div>
+              <div class="desafio-giro__painel">
+                <p class="previsao-turma" id="previsao-turma"></p>
+                <button type="button" class="botao botao--ouro botao--grande" id="botao-girar-desafio">Girar roleta</button>
+                <div class="resultado resultado--escuro" id="resultado-desafio" aria-live="polite" hidden></div>
+                <button type="button" class="botao botao--claro" id="botao-refazer-desafio" hidden>Refazer desafio</button>
+                <p class="dica">Este giro faz parte só do desafio e não entra nas estatísticas da roleta virtual.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 4.5 RESULTADOS E ESTATÍSTICAS ============ -->
+    <section id="resultados" class="secao">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <p class="sobretitulo">Seus dados</p>
+          <h2>Resultados e estatísticas</h2>
+          <p>Tudo é atualizado automaticamente a cada giro da roleta virtual.</p>
+        </header>
+
+        <div class="estatisticas">
+          <article class="numero">
+            <p class="numero__rotulo">Total de giros</p>
+            <p class="numero__valor" id="est-total">0</p>
+            <p class="numero__detalhe">nesta sessão</p>
+          </article>
+          <article class="numero numero--vermelho">
+            <p class="numero__rotulo"><span class="bolinha bolinha--vermelho" aria-hidden="true"></span>Vermelho</p>
+            <p class="numero__valor" id="est-vermelho">0</p>
+            <p class="numero__detalhe">Observado: <strong id="est-perc-vermelho">Nenhum giro realizado</strong></p>
+            <p class="numero__detalhe">Teórico: <strong>50%</strong></p>
+          </article>
+          <article class="numero numero--preto">
+            <p class="numero__rotulo"><span class="bolinha bolinha--preto" aria-hidden="true"></span>Preto</p>
+            <p class="numero__valor" id="est-preto">0</p>
+            <p class="numero__detalhe">Observado: <strong id="est-perc-preto">Nenhum giro realizado</strong></p>
+            <p class="numero__detalhe">Teórico: <strong>50%</strong></p>
+          </article>
+          <article class="numero">
+            <p class="numero__rotulo">Previsões certas</p>
+            <p class="numero__valor" id="est-acertos">—</p>
+            <p class="numero__detalhe" id="est-acertos-detalhe">Nenhum giro realizado</p>
+          </article>
+        </div>
+
+        <div class="painel-dados">
+          <article class="cartao comparativo">
+            <h3>Observado × teórico</h3>
+            <div class="comparativo__linha">
+              <span class="comparativo__rotulo">Teórico</span>
+              <div class="barra" role="img" aria-label="Probabilidade teórica: 50% vermelho e 50% preto">
+                <span class="barra__seg barra__seg--v" style="width:50%">50%</span>
+                <span class="barra__seg barra__seg--p" style="width:50%">50%</span>
+              </div>
+            </div>
+            <div class="comparativo__linha">
+              <span class="comparativo__rotulo">Observado</span>
+              <div class="barra" id="barra-observada" role="img" aria-label="Nenhum giro realizado">
+                <span class="barra__seg barra__seg--v" id="barra-obs-v" style="width:0%"></span>
+                <span class="barra__seg barra__seg--p" id="barra-obs-p" style="width:0%"></span>
+                <span class="barra__vazia" id="barra-obs-vazia">Nenhum giro realizado</span>
+              </div>
+            </div>
+            <p class="nota">A linha tracejada marca 50%. Em poucos giros, o observado pode ficar longe dela — e isso é normal.</p>
+          </article>
+
+          <article class="cartao sequencias">
+            <h3>Sequências consecutivas</h3>
+            <dl class="sequencias__lista">
+              <div class="sequencias__item">
+                <dt><span class="bolinha bolinha--vermelho" aria-hidden="true"></span>Maior sequência de Vermelho</dt>
+                <dd id="est-maior-v">0</dd>
+              </div>
+              <div class="sequencias__item">
+                <dt><span class="bolinha bolinha--preto" aria-hidden="true"></span>Maior sequência de Preto</dt>
+                <dd id="est-maior-p">0</dd>
+              </div>
+              <div class="sequencias__item">
+                <dt>Sequência atual</dt>
+                <dd id="est-atual">—</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+
+        <article class="cartao historico">
+          <div class="historico__topo">
+            <h3>Histórico em ordem</h3>
+            <button type="button" class="botao botao--perigo" id="botao-reiniciar">Reiniciar simulação</button>
+          </div>
+          <p class="historico__vazio" id="historico-vazio">Nenhum giro realizado. Vá até a <a href="#roleta">roleta virtual</a> e faça o primeiro giro.</p>
+          <ol class="historico__lista" id="historico-lista"></ol>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONCLUSÃO ============ -->
+    <section id="conclusao" class="secao secao--papel">
+      <div class="container conclusao">
+        <header class="secao__cabecalho">
+          <p class="sobretitulo">Fechando a atividade</p>
+          <h2>Conclusão</h2>
+        </header>
+        <p class="conclusao__dados" id="conclusao-dados" aria-live="polite"></p>
+        <ul class="aprendizados">
+          <li>Cada giro de uma roleta justa é um <strong>evento independente</strong>.</li>
+          <li>Uma sequência anterior <strong>não altera</strong> a probabilidade do próximo resultado: vermelho e preto continuam com 50%.</li>
+          <li>Não existe cor “atrasada” — essa ideia é a <strong>Falácia do Apostador</strong>.</li>
+          <li>Em poucos giros, a frequência observada pode se afastar de 50%; com muitos giros, ela tende a se aproximar da probabilidade teórica.</li>
+        </ul>
+        <a class="botao botao--primario" href="#roleta">Voltar para a roleta</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p><strong>Roleta da Probabilidade</strong> · Atividade educativa — Bloco 1, Habilidade EF09MA20.</p>
+      <p>O sorteio digital simula uma roleta justa com resultados equiprováveis. Ele não prevê resultados de jogos reais e não é estratégia para apostas.</p>
+    </div>
+  </footer>
+
+  <p class="sr-only" id="anuncio" aria-live="polite"></p>
+
+  <script src="js/estatisticas.js"></script>
+  <script src="js/roleta.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
